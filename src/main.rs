@@ -4,13 +4,10 @@ use structopt::StructOpt;
 
 
 fn main() {
-    let input = std::env::args().nth(1).expect("no expression provided");
-    let args = Cli {
-        input,
-    };
+    let args = Cli::from_args();
 
     let stdout = stdout();
-    let width = args.input.len() + 2;
+    let width = args.input.len();
 
     let mut writer = BufWriter::new(stdout.lock());
     say(args.input.as_ref(), width, &mut writer).unwrap();
