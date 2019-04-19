@@ -1,0 +1,8 @@
+[package]
+name = "rust-test"
+version = "0.1.0"
+authors = ["Roberts Kalnins <rkalnins314@gmail.com>"]
+edition = "2018"
+
+[dependencies]
+ferris-says = "0.1"
